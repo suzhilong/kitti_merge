@@ -1,0 +1,21 @@
+#color_pointcloud
+./bin/color_pointcloud \
+/home/su/code/code/kitti00/velodyne/00/pcds/ \
+/home/su/code/code/kitti00/color/00/image_2/  \
+/home/su/code/code/kitti_merge/opt/colored_pcds_2/ \
+0
+
+
+#kitti_premerge
+./bin/kitti_premerge \
+/home/su/code/code/kitti_merge/opt/colored_pcds_2/ \
+/home/su/code/code/kitti00/poses/00.txt \
+/home/su/code/code/kitti_merge/opt/premerged/
+
+
+#kitti_merge
+./bin/kitti_merge \
+/home/su/code/code/kitti_merge/opt/colored_pcds_2/ \
+/home/su/code/code/kitti00/poses/00.txt \
+/home/su/code/code/kitti_merge/opt/mergered/merge.pcd
+
